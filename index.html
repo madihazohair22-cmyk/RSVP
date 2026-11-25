@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 20px 0 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.option {
+  display: block;
+  padding: 14px;
+  margin: 8px 0;
+  background: #eee;
+  border-radius: 5px;
+  font-weight: normal;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 25px;
+  background: #304638;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<form id="rsvpForm">
+
+<label>Your name</label>
+<input type="text" name="name" required>
+
+<label>Are you coming?</label>
+
+<label class="option">
+<input type="radio" name="attendance" value="Yes" required>
+Absolutely, wouldn't miss it!
+</label>
+
+<label class="option">
+<input type="radio" name="attendance" value="No">
+Can't make it this time.
+</label>
+
+<label>Will You be Participating in White Elephant Gift Exchange?</label>
+
+<label class="option">
+<input type="radio" name="gift" value="Yes" required>
+Yes
+</label>
+
+<label class="option">
+<input type="radio" name="gift" value="No">
+No
+</label>
+
+<button type="submit">RSVP NOW</button>
+
+</form>
+
+</body>
+</html>
