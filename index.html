@@ -86,5 +86,34 @@ No
 
 </form>
 
+<script>
+const scriptURL = "https://script.google.com/macros/s/AKfycby02qktKd_wcrKNp87egJHjHti6nuC4sAez9sSGAy7bhtWGBUQ1xASI5k3mHEjzyMoj2g/exec";
+
+document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    name: form.elements["name"].value,
+    attendance: form.elements["attendance"].value,
+    gift: form.elements["gift"].value
+  };
+
+  fetch(scriptURL, {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert("Thank you! Your RSVP has been submitted.");
+    form.reset();
+  })
+  .catch(() => {
+    alert("Something went wrong. Please try again.");
+  });
+});
+</script>
+</body>
+</html>
+
 </body>
 </html>
